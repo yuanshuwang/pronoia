@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Runtime output
+logs/*.log
+output/digests/*.md
+
+# Legacy paths (removed modules — ignore if folders reappear)
+reports/
+cognitive/
+validation/
+analyzer/
+crawler/
+scheduler/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/

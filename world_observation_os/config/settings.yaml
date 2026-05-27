@@ -1,0 +1,62 @@
+app:
+  name: World Observation OS
+  version: "1.0.0"
+  motto: "Observe first. Interpret slowly."
+
+database:
+  pool_size: 5
+  max_overflow: 5
+  echo: false
+
+reddit:
+  # Community-based observation — high signal density over volume
+  subreddits:
+    - digitalnomad
+    - solotravel
+    - simpleliving
+    - ApartmentLiving
+    - Lonely
+    - ADHD
+    - productivity
+    - BuyItForLife
+  posts_per_subreddit: 15
+  comments_per_post: 20
+  sort: new  # new | hot
+  retry:
+    max_attempts: 3
+    delay_seconds: 2
+
+filters:
+  # Lightweight heuristics — assist reading, not conclusions
+  min_post_chars: 120
+  min_comment_chars: 80
+  min_upvotes_post: 0
+  min_upvotes_comment: 1
+  emotional_markers:
+    - exhausted
+    - overwhelmed
+    - lonely
+    - frustrated
+    - burnout
+    - anxious
+    - tired of
+    - struggle
+    - hate
+    - painful
+  workaround_markers:
+    - workaround
+    - hack
+    - what i do
+    - instead i
+    - spreadsheet
+    - built my own
+    - manual process
+
+review:
+  digest_dir: output/digests
+  digest_top_n: 25
+
+logging:
+  dir: logs
+  rotation: "10 MB"
+  retention: "30 days"
